@@ -10,6 +10,8 @@ def touched_bat(grid):
 
 def touched_hole():
     print("You fell down a hole. Game over.")
+    exit()
 
 def touched_wompus():
     print("You have been attacked by the Wompus!")
+    exit()
