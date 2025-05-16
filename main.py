@@ -1,4 +1,5 @@
 import random as r
+from player import Player
 
 board = [[0, 0, 0, 0, 0],
          [0, 0, 0, 0, 0],
@@ -18,10 +19,18 @@ opponents = {
 def main():
 
     init_chars()
-    pretty_print(board)
-    hazard_check(board, "hole")
-    hazard_check(board, "bat")
-    hazard_check(board, "wompus")
+    while True:
+        pretty_print(board)
+        hazard_check(board, "hole")
+        hazard_check(board, "bat")
+        hazard_check(board, "wompus")
+        choice = input("1 to move 2 to shoot: ")
+        if choice == "1":
+            Player.move(board)
+        elif choice == "2":
+            Player.shoot_arrow(board)
+
+
 
 
 
